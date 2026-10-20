@@ -40,10 +40,10 @@ flowchart TD
 ## 방법
 
 1. **하이브리드 2단계** — 카테고리 키워드 사전 + 별점으로 1차 분류하고, 룰이 애매한 '의심건'만 트랜스포머로 재분류. 추론 비용을 줄이면서 정확도는 유지.
-2. **파인튜닝** — `beomi/KcELECTRA-base` 3클래스. StratifiedKFold(5~7), `compute_class_weight('balanced')` + label smoothing 0.1, AdamW + linear warmup(10%), grad clip 1.0. **macro-F1** 기준 early stop과, val_loss가 최저 대비 1.5배를 넘으면 중단하는 과적합 가드.
-3. **서빙** — ONNX 변환(opset 14, dynamic axes) 후 동적 양자화, onnxruntime CPU 추론.
+2. **파인튜닝** — `beomi/KcELECTRA-base` 3클래스. 라벨링 가이드(내용 기반, 별점 금지)로 만든 수동 라벨셋을 confident learning으로 정제. 7-fold StratifiedKFold로 설정을 고른 뒤 배포 모델은 단일 분할 held-out으로 학습. class weight + label smoothing 0.1, AdamW + linear warmup(10%), grad clip 1.0, 하위 층 동결. **macro-F1** 기준 early stop과, val_loss가 최저 대비 1.5배를 넘으면 중단하는 과적합 가드. 모델 레지스트리로 후보 5종을 같은 테스트셋에서 비교.
+3. **서빙** — ONNX 변환(opset 14, dynamic axes) 후 onnxruntime CPU 추론. 동적 양자화는 레시피로 보유(배포 미적용).
 4. **토픽·키워드** — kiwipiepy 명사(NNG/NNP)·길이≥2·도메인 불용어 제거 → LDA(pyLDAvis), BERTopic(SentenceTransformer + UMAP + HDBSCAN). 키워드는 TF-IDF(1,2-gram).
-5. **추세검정** — 메뉴별 월간 긍정률에 Mann-Kendall(비모수 추세), Sen's slope(속도), 정점기 vs 최근 2-비율 z검정(효과크기 Cohen's h). 대조 메뉴와 하락 속도 차이는 OLS 상호작용으로 검정.
+5. **추세검정** — 메뉴별 월간 긍정률에 Mann-Kendall(비모수 추세)과 Sen's slope(속도)를 직접 구현해 적용, 정점기 vs 최근 2-비율 z검정(효과크기 Cohen's h). 대조 메뉴와 하락 속도 차이는 OLS 상호작용으로 검정.
 6. **리포트** — 분기별 브랜드 리포트, 메뉴 심층 리포트(레시피 변경 전후), 신메뉴 리포트를 템플릿으로 자동 생성.
 
 ## 코드 발췌
@@ -99,10 +99,22 @@ logits = sess.run(None, {"input_ids": ids.astype(np.int64), "attention_mask": ma
 ```
 
 ```python
-# 메뉴 긍정률 추세검정
-import pymannkendall as mk
+# 메뉴 긍정률 추세검정 (Mann-Kendall · Sen's slope 직접 구현)
+import numpy as np
+from scipy.stats import norm
 from statsmodels.stats.proportion import proportions_ztest
-res = mk.original_test(monthly_pos_rate_after_peak)        # tau, p, Sen's slope
+
+def mann_kendall(x):
+    x = np.asarray(x, float); n = len(x)
+    s = sum(np.sign(x[j] - x[i]) for i in range(n - 1) for j in range(i + 1, n))
+    var_s = n * (n - 1) * (2 * n + 5) / 18
+    z = (s - np.sign(s)) / np.sqrt(var_s) if s != 0 else 0.0
+    tau = s / (n * (n - 1) / 2)
+    p = 2 * (1 - norm.cdf(abs(z)))
+    slope = np.median([(x[j] - x[i]) / (j - i) for i in range(n - 1) for j in range(i + 1, n)])  # Sen
+    return tau, p, slope
+
+tau, p_mk, sen = mann_kendall(monthly_pos_rate_after_peak)
 z, p = proportions_ztest([pos_peak, pos_recent], [n_peak, n_recent])
 h = 2 * (np.arcsin(np.sqrt(pos_peak / n_peak)) - np.arcsin(np.sqrt(pos_recent / n_recent)))  # Cohen's h
 ```

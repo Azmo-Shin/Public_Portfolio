@@ -16,8 +16,9 @@
 | 05 | [`05_korean_sentiment_kcelectra`](05_korean_sentiment_kcelectra/) | 리뷰 감성·토픽 분석 체계 | 룰+KcELECTRA 하이브리드 · StratifiedKFold · ONNX CPU 서빙 · LDA/BERTopic · Mann-Kendall |
 | 06 | [`06_genai_tool_agent`](06_genai_tool_agent/) | 프레임워크 없는 tool-calling 에이전트 | @tool 스키마 · 가드레일 6종 · 오프라인 TDD · 멀티에이전트 하네스 |
 | 07 | [`07_rule_based_scoring`](07_rule_based_scoring/) | 키워드·노출순위·상담·매핑코드 규칙 점수 | 5요소 복합점수 · 배타 규칙 분류 · 다단계 문자열 매칭 · 홀드아웃 벤치마크 |
+| 08 | [`08_personal_agent_video_pipeline`](08_personal_agent_video_pipeline/) | (개인) 메신저 한마디 → 조사·대본·내 목소리·영상 자동 생성 멀티봇 | 주문서 관문 · 숫자 글자 대조 · zero-shot TTS 잘림 방어 · 역할별 봇 8개 운영 · 사람만 승인 |
 
-각 폴더는 같은 구조입니다: **문제 설정 → 데이터(종류만) → 분석 프로세스(도식) → 방법 → 코드 발췌 → 검증과 한계**.
+01~07은 회사 실무, 08은 개인 프로젝트입니다. 각 폴더는 같은 구조입니다: **문제 설정 → 데이터(종류만) → 분석 프로세스(도식) → 방법 → 코드 발췌 → 검증과 한계**.
 
 ## 기술 스택
 
@@ -27,7 +28,7 @@
 | 예측·검증 | Prophet · XGBoost · LightGBM · TimeSeriesSplit · RandomizedSearchCV · SHAP · 공적분/Granger · VIF |
 | 통계 | ANOVA/Tukey · Spearman · Mann-Whitney · Kruskal-Wallis · BH-FDR · Mann-Kendall · 순열검정 |
 | 공간 | GeoPandas · libpysal · esda · QGIS · KDE |
-| NLP·Gen-AI | KcELECTRA 파인튜닝 · ONNX · LDA · BERTopic · kiwipiepy · tool-calling 에이전트 · MCP |
+| NLP·Gen-AI | KcELECTRA 파인튜닝 · ONNX · LDA · BERTopic · kiwipiepy · tool-calling 에이전트 · MCP · 멀티봇 운영(Hermes) · zero-shot TTS(Qwen3-TTS) |
 | 엔지니어링 | FastAPI · Vue3 · React · Dash · SQLAlchemy · 월간 배치 · Selenium/Playwright |
 
 ## 공개 정책

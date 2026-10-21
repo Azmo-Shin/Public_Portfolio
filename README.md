@@ -14,7 +14,7 @@
 | 03 | [`03_store_clustering_anomaly`](03_store_clustering_anomaly/) | 점포 월간 등급화 무인 배치 + 이상탐지 | Ward HAC gap-ratio 최적 K · IQR 분리 · 1D Jenks · 양도양수 병합 · 요일조건부 ±1.5σ |
 | 04 | [`04_effect_testing_fdr`](04_effect_testing_fdr/) | 담당자·마케팅 효과 검증 | ANOVA/Tukey · Spearman · Mann-Whitney · Kruskal-Wallis · Benjamini-Hochberg FDR |
 | 05 | [`05_korean_sentiment_kcelectra`](05_korean_sentiment_kcelectra/) | 리뷰 감성·토픽 분석 체계 | 룰+KcELECTRA 하이브리드 · StratifiedKFold · ONNX CPU 서빙 · LDA/BERTopic · Mann-Kendall |
-| 06 | [`06_genai_tool_agent`](06_genai_tool_agent/) | 프레임워크 없는 tool-calling 에이전트 | @tool 스키마 · 가드레일 6종 · 오프라인 TDD · 멀티에이전트 하네스 |
+| 06 | [`06_genai_tool_agent`](06_genai_tool_agent/) | 프레임워크 없는 tool-calling 에이전트 | @tool 스키마 · 가드레일 6종 · 오프라인 TDD · NL→SQL allowlist |
 | 07 | [`07_rule_based_scoring`](07_rule_based_scoring/) | 키워드·노출순위·상담·매핑코드 규칙 점수 | 5요소 복합점수 · 배타 규칙 분류 · 다단계 문자열 매칭 · 홀드아웃 벤치마크 |
 | 08 | [`08_personal_agent_video_pipeline`](08_personal_agent_video_pipeline/) | (개인) 메신저 한마디 → 조사·대본·내 목소리·영상 자동 생성 멀티봇 | 주문서 관문 · 숫자 글자 대조 · zero-shot TTS 잘림 방어 · 역할별 봇 8개 운영 · 사람만 승인 |
 

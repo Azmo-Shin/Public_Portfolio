@@ -1,11 +1,38 @@
-# Shin Hong-jo · Data Scientist Portfolio
+<p align="center"><img src="assets/banner.png" alt="신홍조 · Data Scientist" width="100%"></p>
 
-매출 예측 · 공간통계 · 텍스트마이닝 · Gen-AI 에이전트를 F&B 프랜차이즈 실무에 적용해 온 **응용 데이터 사이언티스트**의 방법론 포트폴리오입니다.
-분석 인프라가 없던 조직에서 **수집 → 데이터마트 → 모델링 → 검증 → 풀스택 BI 배포**까지를 혼자 구축했고, 그 전에는 공공기관 분석 PL로 정책 데이터 프로젝트를 수행했습니다.
+<p align="center">
+<b>예측 · 공간통계 · 텍스트마이닝 · Gen-AI 에이전트</b>를 F&B 프랜차이즈 실무에 적용해 온 응용 데이터 사이언티스트의 <b>방법론 포트폴리오</b>입니다.<br>
+외식 프랜차이즈 본사에서 <b>수집 → 데이터마트 → 모델링 → 검증 → 풀스택 BI 배포</b>까지 혼자 구축했고, 그 전에는 공공기관 분석 PL로 정책 데이터 프로젝트를 수행했습니다.
+</p>
 
-> 이 저장소는 **방법론(methodology)** 포트폴리오입니다. 회사 데이터·브랜드명·점포명·실측 수치·접속 정보는 포함하지 않으며, 알고리즘과 설계 결정만 정리했습니다. 각 폴더의 도식은 실제 수행 프로세스를 그린 것이고, 화면 캡처는 브랜드명·수치를 가린 것입니다.
+> 회사 데이터·브랜드명·점포명·실측 수치·접속 정보는 포함하지 않습니다. 각 폴더는 **문제 설정 → 데이터(종류만) → 프로세스 도식 → 방법 → 코드 발췌 → 검증과 한계** 순서로 같고, 화면 캡처는 브랜드명·수치를 가린 것입니다.
 
-## 방법론 폴더
+## 프로젝트
+
+<table>
+<tr>
+<td width="50%"><a href="01_sales_forecasting/"><img src="assets/card_01.png" width="100%" alt="01 시계열 매출 예측"></a></td>
+<td width="50%"><a href="02_spatial_esda/"><img src="assets/card_02.png" width="100%" alt="02 공간통계 ESDA"></a></td>
+</tr>
+<tr>
+<td><a href="03_store_clustering_anomaly/"><img src="assets/card_03.png" width="100%" alt="03 점포 등급화·이상탐지"></a></td>
+<td><a href="04_effect_testing_fdr/"><img src="assets/card_04.png" width="100%" alt="04 효과 검증"></a></td>
+</tr>
+<tr>
+<td><a href="05_korean_sentiment_kcelectra/"><img src="assets/card_05.png" width="100%" alt="05 한국어 리뷰 감성"></a></td>
+<td><a href="06_genai_tool_agent/"><img src="assets/card_06.png" width="100%" alt="06 tool-calling 에이전트"></a></td>
+</tr>
+<tr>
+<td><a href="07_rule_based_scoring/"><img src="assets/card_07.png" width="100%" alt="07 규칙 기반 스코어링"></a></td>
+<td><a href="08_personal_agent_video_pipeline/"><img src="assets/card_08.png" width="100%" alt="08 멀티봇 영상 파이프라인"></a></td>
+</tr>
+<tr>
+<td><a href="09_local_llm_eval_sentiment_diag/"><img src="assets/card_09.png" width="100%" alt="09 로컬 LLM 평가·감성모델 진단"></a></td>
+<td><a href="10_ai_judging_multiagent_site/"><img src="assets/card_10.png" width="100%" alt="10 멀티에이전트 AI 심사"></a></td>
+</tr>
+</table>
+
+## 한눈에 보기
 
 | # | 폴더 | 한 줄 요약 | 핵심 기법 |
 |---|---|---|---|
@@ -20,7 +47,7 @@
 | 09 | [`09_local_llm_eval_sentiment_diag`](09_local_llm_eval_sentiment_diag/) | 로컬 LLM 6종 15과목 비교 + 운영 감성모델 진단 + GPU 전환 검증 | 자체 과제 자동 채점 · thinking 감지 · McNemar ≈ 표시 · 정직성 과제 · 원인 가설 실험 · 칸 단위 대조 |
 | 10 | [`10_ai_judging_multiagent_site`](10_ai_judging_multiagent_site/) | 게임 해커톤 멀티에이전트 AI 심사 사이트 | 마더+서브에이전트 N개 동시 · 3단계(병렬 심사→취합 검토→최종 판정) · 파일 기반 수집·검증 · 조작 문구 방어 · 사람 최종 검토 |
 
-01~07·09·10은 회사 실무, 08은 개인 프로젝트입니다. 각 폴더는 같은 구조입니다: **문제 설정 → 데이터(종류만) → 분석 프로세스(도식) → 방법 → 코드 발췌 → 검증과 한계**.
+01~07·09·10은 회사 실무, 08은 개인 프로젝트입니다.
 
 ## 기술 스택
 
@@ -28,10 +55,10 @@
 |---|---|
 | 언어·데이터 | Python (pandas · NumPy · scikit-learn · SciPy · statsmodels · PyTorch) · SQL (MySQL · MariaDB · PostgreSQL · BigQuery) · Git |
 | 예측·검증 | Prophet · XGBoost · LightGBM · TimeSeriesSplit · RandomizedSearchCV · SHAP · 공적분/Granger · VIF |
-| 통계 | ANOVA/Tukey · Spearman · Mann-Whitney · Kruskal-Wallis · BH-FDR · Mann-Kendall · 순열검정 |
+| 통계 | ANOVA/Tukey · Spearman · Mann-Whitney · Kruskal-Wallis · BH-FDR · Mann-Kendall · McNemar · 순열검정 |
 | 공간 | GeoPandas · libpysal · esda · QGIS · KDE |
-| NLP·Gen-AI | KcELECTRA 파인튜닝 · ONNX · LDA · BERTopic · kiwipiepy · tool-calling 에이전트 · MCP · 멀티봇 운영(Hermes) · zero-shot TTS(Qwen3-TTS) · 로컬 LLM 평가(Ollama · McNemar) · Claude Code 멀티에이전트 오케스트레이션 |
-| 엔지니어링 | FastAPI · Vue3 · React · Dash · SQLAlchemy · 월간 배치 · Selenium/Playwright |
+| NLP·Gen-AI | KcELECTRA 파인튜닝 · ONNX · LDA · BERTopic · kiwipiepy · tool-calling 에이전트 · MCP · 로컬 LLM 평가(Ollama) · Claude Code 멀티에이전트 · 멀티봇 운영(Hermes) · zero-shot TTS(Qwen3-TTS) |
+| 엔지니어링 | FastAPI · Vue3 · React · Dash · SQLAlchemy · SQLite · 월간 배치 · Selenium/Playwright |
 
 ## 공개 정책
 

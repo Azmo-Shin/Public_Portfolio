@@ -3,7 +3,7 @@
 매출 예측 · 공간통계 · 텍스트마이닝 · Gen-AI 에이전트를 F&B 프랜차이즈 실무에 적용해 온 **응용 데이터 사이언티스트**의 방법론 포트폴리오입니다.
 분석 인프라가 없던 조직에서 **수집 → 데이터마트 → 모델링 → 검증 → 풀스택 BI 배포**까지를 혼자 구축했고, 그 전에는 공공기관 분석 PL로 정책 데이터 프로젝트를 수행했습니다.
 
-> 이 저장소는 **방법론(methodology)** 포트폴리오입니다. 회사 데이터·브랜드명·점포명·실측 수치·접속 정보는 포함하지 않으며, 알고리즘과 설계 결정만 정리했습니다. 각 폴더의 도식은 실제 수행 프로세스를 그린 것입니다.
+> 이 저장소는 **방법론(methodology)** 포트폴리오입니다. 회사 데이터·브랜드명·점포명·실측 수치·접속 정보는 포함하지 않으며, 알고리즘과 설계 결정만 정리했습니다. 각 폴더의 도식은 실제 수행 프로세스를 그린 것이고, 화면 캡처는 브랜드명·수치를 가린 것입니다.
 
 ## 방법론 폴더
 
@@ -17,8 +17,10 @@
 | 06 | [`06_genai_tool_agent`](06_genai_tool_agent/) | 프레임워크 없는 tool-calling 에이전트 | @tool 스키마 · 가드레일 6종 · 오프라인 TDD · NL→SQL allowlist |
 | 07 | [`07_rule_based_scoring`](07_rule_based_scoring/) | 키워드·노출순위·상담·매핑코드 규칙 점수 | 5요소 복합점수 · 배타 규칙 분류 · 다단계 문자열 매칭 · 홀드아웃 벤치마크 |
 | 08 | [`08_personal_agent_video_pipeline`](08_personal_agent_video_pipeline/) | (개인) 메신저 한마디 → 조사·대본·내 목소리·영상 자동 생성 멀티봇 | 주문서 관문 · 숫자 글자 대조 · zero-shot TTS 잘림 방어 · 역할별 봇 8개 운영 · 사람만 승인 |
+| 09 | [`09_local_llm_eval_sentiment_diag`](09_local_llm_eval_sentiment_diag/) | 로컬 LLM 6종 15과목 비교 + 운영 감성모델 진단 + GPU 전환 검증 | 자체 과제 자동 채점 · thinking 감지 · McNemar ≈ 표시 · 정직성 과제 · 원인 가설 실험 · 칸 단위 대조 |
+| 10 | [`10_ai_judging_multiagent_site`](10_ai_judging_multiagent_site/) | 게임 해커톤 멀티에이전트 AI 심사 사이트 | 마더+서브에이전트 N개 동시 · 3단계(병렬 심사→취합 검토→최종 판정) · 파일 기반 수집·검증 · 조작 문구 방어 · 사람 최종 검토 |
 
-01~07은 회사 실무, 08은 개인 프로젝트입니다. 각 폴더는 같은 구조입니다: **문제 설정 → 데이터(종류만) → 분석 프로세스(도식) → 방법 → 코드 발췌 → 검증과 한계**.
+01~07·09·10은 회사 실무, 08은 개인 프로젝트입니다. 각 폴더는 같은 구조입니다: **문제 설정 → 데이터(종류만) → 분석 프로세스(도식) → 방법 → 코드 발췌 → 검증과 한계**.
 
 ## 기술 스택
 
@@ -28,7 +30,7 @@
 | 예측·검증 | Prophet · XGBoost · LightGBM · TimeSeriesSplit · RandomizedSearchCV · SHAP · 공적분/Granger · VIF |
 | 통계 | ANOVA/Tukey · Spearman · Mann-Whitney · Kruskal-Wallis · BH-FDR · Mann-Kendall · 순열검정 |
 | 공간 | GeoPandas · libpysal · esda · QGIS · KDE |
-| NLP·Gen-AI | KcELECTRA 파인튜닝 · ONNX · LDA · BERTopic · kiwipiepy · tool-calling 에이전트 · MCP · 멀티봇 운영(Hermes) · zero-shot TTS(Qwen3-TTS) |
+| NLP·Gen-AI | KcELECTRA 파인튜닝 · ONNX · LDA · BERTopic · kiwipiepy · tool-calling 에이전트 · MCP · 멀티봇 운영(Hermes) · zero-shot TTS(Qwen3-TTS) · 로컬 LLM 평가(Ollama · McNemar) · Claude Code 멀티에이전트 오케스트레이션 |
 | 엔지니어링 | FastAPI · Vue3 · React · Dash · SQLAlchemy · 월간 배치 · Selenium/Playwright |
 
 ## 공개 정책

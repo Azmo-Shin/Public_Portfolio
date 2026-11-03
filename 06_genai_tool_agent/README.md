@@ -91,4 +91,4 @@ class FakeClient:
 
 - 가드레일은 "모델이 시도해도 코드가 거부"하는 구조이므로 프롬프트 우회에 영향받지 않음.
 - 사내 서비스에 붙인 단계가 아니라 재사용 템플릿이며, 개발 과정의 다중 에이전트 코드 리뷰는 동료가 만든 작업 환경을 이용한 것.
-- 전체 템플릿 코드는 별도 저장소(gemma4-agent-template)에 있음.
+- 전체 템플릿 코드: [gemma4-agent-template](https://github.com/Azmo-Shin/gemma4-agent-template) (공개).

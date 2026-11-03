@@ -49,6 +49,12 @@
 
 01~07·09·10은 회사 실무, 08은 개인 프로젝트입니다.
 
+## 코드 저장소
+
+- [seoul-living-population-gis](https://github.com/Azmo-Shin/seoul-living-population-gis) — 02의 데이터 기반: 서울 250m 생활인구 적재·공간차원·집계마트·FastAPI·React/deck.gl
+- [gemma4-agent-template](https://github.com/Azmo-Shin/gemma4-agent-template) — 06의 전체 템플릿 코드
+- [meeting-minutes-cli](https://github.com/Azmo-Shin/meeting-minutes-cli) — 회의·강의 음성 → 화자분리 전사 → 로컬 LLM 회의록 CLI (개인)
+
 ## 기술 스택
 
 | 분류 | 기술 |

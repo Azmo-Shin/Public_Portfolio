@@ -40,7 +40,7 @@
 </tr>
 <tr>
 <td><a href="11_platform_crowding_regression/"><img src="assets/card_11.svg" width="100%" alt="11 승강장 혼잡도 예측 (공공)"></a></td>
-<td></td>
+<td><a href="demos/"><img src="assets/card_demos.svg" width="100%" alt="실행 예제 · 글"></a></td>
 </tr>
 </table>
 

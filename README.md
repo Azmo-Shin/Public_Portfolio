@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/banner.png" alt="신홍조 · Data Scientist" width="100%"></p>
+<p align="center"><img src="assets/banner.svg" alt="신홍조 · Data Scientist" width="100%"></p>
 
 <p align="center">
 <b>예측 · 공간통계 · 텍스트마이닝 · Gen-AI 에이전트</b>를 F&B 프랜차이즈 실무에 적용해 온 응용 데이터 사이언티스트의 <b>방법론 포트폴리오</b>입니다.<br>
@@ -11,24 +11,24 @@
 
 <table>
 <tr>
-<td width="50%"><a href="01_sales_forecasting/"><img src="assets/card_01.png" width="100%" alt="01 시계열 매출 예측"></a></td>
-<td width="50%"><a href="02_spatial_esda/"><img src="assets/card_02.png" width="100%" alt="02 공간통계 ESDA"></a></td>
+<td width="50%"><a href="01_sales_forecasting/"><img src="assets/card_01.svg" width="100%" alt="01 시계열 매출 예측"></a></td>
+<td width="50%"><a href="02_spatial_esda/"><img src="assets/card_02.svg" width="100%" alt="02 공간통계 ESDA"></a></td>
 </tr>
 <tr>
-<td><a href="03_store_clustering_anomaly/"><img src="assets/card_03.png" width="100%" alt="03 점포 등급화·이상탐지"></a></td>
-<td><a href="04_effect_testing_fdr/"><img src="assets/card_04.png" width="100%" alt="04 효과 검증"></a></td>
+<td><a href="03_store_clustering_anomaly/"><img src="assets/card_03.svg" width="100%" alt="03 점포 등급화·이상탐지"></a></td>
+<td><a href="04_effect_testing_fdr/"><img src="assets/card_04.svg" width="100%" alt="04 효과 검증"></a></td>
 </tr>
 <tr>
-<td><a href="05_korean_sentiment_kcelectra/"><img src="assets/card_05.png" width="100%" alt="05 한국어 리뷰 감성"></a></td>
-<td><a href="06_genai_tool_agent/"><img src="assets/card_06.png" width="100%" alt="06 tool-calling 에이전트"></a></td>
+<td><a href="05_korean_sentiment_kcelectra/"><img src="assets/card_05.svg" width="100%" alt="05 한국어 리뷰 감성"></a></td>
+<td><a href="06_genai_tool_agent/"><img src="assets/card_06.svg" width="100%" alt="06 tool-calling 에이전트"></a></td>
 </tr>
 <tr>
-<td><a href="07_rule_based_scoring/"><img src="assets/card_07.png" width="100%" alt="07 규칙 기반 스코어링"></a></td>
-<td><a href="08_personal_agent_video_pipeline/"><img src="assets/card_08.png" width="100%" alt="08 멀티봇 영상 파이프라인"></a></td>
+<td><a href="07_rule_based_scoring/"><img src="assets/card_07.svg" width="100%" alt="07 규칙 기반 스코어링"></a></td>
+<td><a href="08_personal_agent_video_pipeline/"><img src="assets/card_08.svg" width="100%" alt="08 멀티봇 영상 파이프라인"></a></td>
 </tr>
 <tr>
-<td><a href="09_local_llm_eval_sentiment_diag/"><img src="assets/card_09.png" width="100%" alt="09 로컬 LLM 평가·감성모델 진단"></a></td>
-<td><a href="10_ai_judging_multiagent_site/"><img src="assets/card_10.png" width="100%" alt="10 멀티에이전트 AI 심사"></a></td>
+<td><a href="09_local_llm_eval_sentiment_diag/"><img src="assets/card_09.svg" width="100%" alt="09 로컬 LLM 평가·감성모델 진단"></a></td>
+<td><a href="10_ai_judging_multiagent_site/"><img src="assets/card_10.svg" width="100%" alt="10 멀티에이전트 AI 심사"></a></td>
 </tr>
 </table>
 

@@ -111,17 +111,15 @@ stable = (labels[3] == labels[5]) & (labels[5] == labels[8])
 ```
 
 ```python
-# 격자 입지점수 — 공간 블록 CV (이웃 누수 방지)
+# 격자 입지점수 — 로지스틱 적합도 → z→T 점수
 from sklearn.linear_model import LogisticRegression
-from sklearn.model_selection import GroupKFold, cross_val_score
+from sklearn.model_selection import cross_val_score
 
 X = grid[features].values
 y = (grid['target_strength_rank'] <= TOP_N).astype(int)        # 강도 상위 = 1, 빈 상권 = 0
-blocks = (grid['gx'] // BLOCK) * 1000 + (grid['gy'] // BLOCK)  # 격자 좌표 → 블록 ID
 
 clf = LogisticRegression(C=0.1, class_weight='balanced', max_iter=2000)
-auc_random = cross_val_score(clf, X, y, cv=5, scoring='roc_auc').mean()
-auc_spatial = cross_val_score(clf, X, y, cv=GroupKFold(5), groups=blocks, scoring='roc_auc').mean()
+auc = cross_val_score(clf, X, y, cv=5, scoring='roc_auc').mean()        # 5-fold CV 변별력
 
 clf.fit(X, y)
 z = clf.decision_function(X)

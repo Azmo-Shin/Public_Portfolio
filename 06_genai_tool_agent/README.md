@@ -1,3 +1,5 @@
+<p align="center"><img src="../assets/card_06.svg" alt="06 · Gen-AI 도구사용 에이전트 — 프레임워크 없는 tool-calling 루프와 가드레일" width="640"></p>
+
 # 06 · Gen-AI 도구사용 에이전트 — 프레임워크 없는 tool-calling 루프와 가드레일
 
 LLM이 로컬 파일·DB를 **직접 읽고 답하되**, 위험한 경로 접근이나 무한 호출이 생기지 않도록 가드레일을 코드로 강제한 에이전트 템플릿입니다.

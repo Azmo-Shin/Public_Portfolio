@@ -1,3 +1,5 @@
+<p align="center"><img src="../assets/card_04.svg" alt="04 · 효과 검증 — ANOVA/Tukey, 비모수 검정, Benjamini-Hochberg FDR" width="640"></p>
+
 # 04 · 효과 검증 — ANOVA/Tukey, 비모수 검정, Benjamini-Hochberg FDR
 
 신규 오픈 매장에서 **담당자에 따라 매출이 다른지**, **오픈 마케팅 항목 점수가 매출로 이어지는지**를 통계적으로 검증해 운영팀의 전략 초점을 바꾼 프로젝트입니다.

@@ -1,3 +1,5 @@
+<p align="center"><img src="../assets/card_05.svg" alt="05 · 한국어 리뷰 감성·토픽 분석 — 룰 + KcELECTRA 하이브리드, ONNX CPU 서빙" width="640"></p>
+
 # 05 · 한국어 리뷰 감성·토픽 분석 — 룰 + KcELECTRA 하이브리드, ONNX CPU 서빙
 
 배달앱·지도 리뷰와 커뮤니티 글을 자동 수집해 **감성·토픽·키워드**를 뽑고, 브랜드·메뉴·지역·월별 리포트를 자동 생성하는 VOC 분석 체계입니다.

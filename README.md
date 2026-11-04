@@ -120,6 +120,7 @@
 
 - [감성 모델이 사람 판정과 어긋날 때 — 원인 가설을 하나씩 지운 기록](writing/01_sentiment_model_diagnosis.md)
 - [임베딩 대신 규칙을 고른 이유 — "모른다"를 말할 수 있는 매칭](writing/02_rules_that_say_i_dont_know.md)
+- [AI_TOP_100 예선 회고 — 기술은 됐는데, 운영에서 졌다](writing/03_aitop100_postmortem.md) (개인 대회)
 
 ## 코드 저장소
 

@@ -11,7 +11,7 @@
 공공기관 분석 PL로 정책 데이터 과제를 수행했고, 이후 외식 프랜차이즈 본사에서 <b>수집 → 데이터마트 → 모델링 → 검증 → 풀스택 BI 배포</b>까지 혼자 구축했습니다.
 </p>
 
-> **TL;DR (EN)** — Applied data scientist (7 yrs: public-sector analytics PL → F&B franchise HQ). This repo shows *how* I decide: 11 anonymized case studies (problem → data → process → method → code → validation & limits) plus runnable demos on synthetic data. Company data, brand names and real metrics are intentionally excluded.
+> **TL;DR (EN)** — Applied data scientist (6+ yrs: public-sector analytics PL → F&B franchise HQ). This repo shows *how* I decide: 11 anonymized case studies (problem → data → process → method → code → validation & limits) plus runnable demos on synthetic data. Company data, brand names and real metrics are intentionally excluded.
 
 ## 프로젝트
 

@@ -46,19 +46,68 @@
 
 ## 한눈에 보기 — 무엇을 왜 그렇게 했나
 
-| # | 프로젝트 | 핵심 판단 | 기법 |
-|---|---|---|---|
-| 01 | [매출 예측](01_sales_forecasting/) | 튜닝 지표(MSE)와 선택 지표(MAPE)를 나누고, 특일을 뺀 MAPE를 "평소 정확도"로 따로 봄 | 트리 5종 후보선택 · Prophet · 볼록가중 블렌딩 · SHAP |
-| 02 | [공간통계 ESDA](02_spatial_esda/) | 인접(Queen) 대신 KNN 가중치로 이웃 없는 구역을 없애고, 매출 예측이 아닌 **스크리닝**으로 범위를 한정 | Moran's I · LISA · KDE · 공간 블록 CV |
-| 03 | [점포 등급화·이상탐지](03_store_clustering_anomaly/) | 전체 평균 밴드는 주말을 전부 이상으로 잡으므로 **요일조건부** 밴드 | Ward HAC 최적 K · Jenks · ±1.5σ |
-| 04 | [효과 검증](04_effect_testing_fdr/) | 배정이 무작위가 아니라 **인과 대신 연관성**으로 한정, 항목 수십 개는 BH-FDR로 보정 | ANOVA/Tukey · 비모수 검정 · BH-FDR |
-| 05 | [리뷰 감성](05_korean_sentiment_kcelectra/) | GPU 없는 서버라 트랜스포머는 **룰이 애매한 리뷰에만** | 룰 + KcELECTRA · ONNX · Mann-Kendall |
-| 06 | [tool-calling 에이전트](06_genai_tool_agent/) | 도구 권한은 모델이 아니라 **코드가** 정함, 키 없이 도는 테스트 | @tool 스키마 · 가드레일 6종 · 오프라인 TDD |
-| 07 | [규칙 기반 스코어링](07_rule_based_scoring/) | 임베딩보다 **"모른다"를 말할 수 있는** 규칙 매칭을 선택 | 복합점수 · 배타 규칙 · 다단계 매칭 |
-| 08 | [멀티봇 영상 파이프라인](08_personal_agent_video_pipeline/) (개인) | 작은 모델의 자유 문장을 해석하지 않고 **정해진 줄만** 읽는 주문서 관문 | 주문서 관문 · 숫자 대조 · TTS 잘림 방어 |
-| 09 | [로컬 LLM 평가·감성모델 진단](09_local_llm_eval_sentiment_diag/) | 벤치마크 대신 **업무 과제**로 재고, GPU 결과가 한 칸이라도 다르면 전환하지 않음 | 15과목 자동 채점 · McNemar · 원인 가설 실험 |
-| 10 | [멀티에이전트 AI 심사](10_ai_judging_multiagent_site/) | 플레이하지 않고 추측한 점수는 무효, 조작 문구 방어, **최종 판단은 사람** | 마더 + 서브에이전트 3단계 · 파일 기반 검증 |
-| 11 | [승강장 혼잡도 예측](11_platform_crowding_regression/) (공공) | 노선 전체 하나가 아니라 **역 × 방향마다** 모델, 가장 최근 1주를 별도 검증 | 태그 시계열 피처 · 회귀 · 면적당 경보 단계 |
+<table>
+<tr>
+<th width="44">#</th>
+<th width="190">프로젝트</th>
+<th>핵심 판단</th>
+</tr>
+<tr>
+<td width="44" align="center">01</td>
+<td width="190"><a href="01_sales_forecasting/">매출 예측</a></td>
+<td>튜닝 지표(MSE)와 선택 지표(MAPE)를 나누고, 특일을 뺀 MAPE를 "평소 정확도"로 따로 봄</td>
+</tr>
+<tr>
+<td width="44" align="center">02</td>
+<td width="190"><a href="02_spatial_esda/">공간통계 ESDA</a></td>
+<td>인접(Queen) 대신 KNN 가중치로 이웃 없는 구역을 없애고, 매출 예측이 아닌 <b>스크리닝</b>으로 범위를 한정</td>
+</tr>
+<tr>
+<td width="44" align="center">03</td>
+<td width="190"><a href="03_store_clustering_anomaly/">점포 등급화·이상탐지</a></td>
+<td>전체 평균 밴드는 주말을 전부 이상으로 잡으므로 <b>요일조건부</b> 밴드</td>
+</tr>
+<tr>
+<td width="44" align="center">04</td>
+<td width="190"><a href="04_effect_testing_fdr/">효과 검증</a></td>
+<td>배정이 무작위가 아니라 <b>인과 대신 연관성</b>으로 한정, 항목 수십 개는 BH-FDR로 보정</td>
+</tr>
+<tr>
+<td width="44" align="center">05</td>
+<td width="190"><a href="05_korean_sentiment_kcelectra/">리뷰 감성</a></td>
+<td>GPU 없는 서버라 트랜스포머는 <b>룰이 애매한 리뷰에만</b></td>
+</tr>
+<tr>
+<td width="44" align="center">06</td>
+<td width="190"><a href="06_genai_tool_agent/">tool-calling 에이전트</a></td>
+<td>도구 권한은 모델이 아니라 <b>코드가</b> 정함, 키 없이 도는 테스트</td>
+</tr>
+<tr>
+<td width="44" align="center">07</td>
+<td width="190"><a href="07_rule_based_scoring/">규칙 기반 스코어링</a></td>
+<td>임베딩보다 <b>"모른다"를 말할 수 있는</b> 규칙 매칭을 선택</td>
+</tr>
+<tr>
+<td width="44" align="center">08</td>
+<td width="190"><a href="08_personal_agent_video_pipeline/">멀티봇 영상 파이프라인</a><br><sub>(개인)</sub></td>
+<td>작은 모델의 자유 문장을 해석하지 않고 <b>정해진 줄만</b> 읽는 주문서 관문</td>
+</tr>
+<tr>
+<td width="44" align="center">09</td>
+<td width="190"><a href="09_local_llm_eval_sentiment_diag/">로컬 LLM 평가·감성모델 진단</a></td>
+<td>벤치마크 대신 <b>업무 과제</b>로 재고, GPU 결과가 한 칸이라도 다르면 전환하지 않음</td>
+</tr>
+<tr>
+<td width="44" align="center">10</td>
+<td width="190"><a href="10_ai_judging_multiagent_site/">멀티에이전트 AI 심사</a></td>
+<td>플레이하지 않고 추측한 점수는 무효, 조작 문구 방어, <b>최종 판단은 사람</b></td>
+</tr>
+<tr>
+<td width="44" align="center">11</td>
+<td width="190"><a href="11_platform_crowding_regression/">승강장 혼잡도 예측</a><br><sub>(공공)</sub></td>
+<td>노선 전체 하나가 아니라 <b>역 × 방향마다</b> 모델, 가장 최근 1주를 별도 검증</td>
+</tr>
+</table>
 
 01~07·09·10은 외식 프랜차이즈 본사 실무, 11은 공공기관 의뢰 과제, 08은 개인 프로젝트입니다.
 

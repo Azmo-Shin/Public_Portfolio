@@ -1,0 +1,23 @@
+name: demos
+on:
+  push:
+  pull_request:
+jobs:
+  demos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r demos/requirements.txt
+      - name: Run demo tests
+        working-directory: demos
+        run: |
+          python -m pytest effect_testing_bh -q
+          python -m pytest forecast_blending -q
+      - name: Run demos end to end
+        working-directory: demos
+        run: |
+          (cd effect_testing_bh && python effect_test_demo.py)
+          (cd forecast_blending && python blend_demo.py)

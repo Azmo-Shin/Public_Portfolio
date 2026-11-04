@@ -55,12 +55,12 @@
 <tr>
 <td width="44" align="center">01</td>
 <td width="190"><a href="01_sales_forecasting/">매출 예측</a></td>
-<td>튜닝 지표(MSE)와 선택 지표(MAPE)를 나누고, 특일을 뺀 MAPE를 "평소 정확도"로 따로 봄</td>
+<td>튜닝(MSE)과 선택(MAPE) 지표를 나누고, 특일을 뺀 MAPE를 평소 정확도로 봄</td>
 </tr>
 <tr>
 <td width="44" align="center">02</td>
 <td width="190"><a href="02_spatial_esda/">공간통계 ESDA</a></td>
-<td>인접(Queen) 대신 KNN 가중치로 이웃 없는 구역을 없애고, 매출 예측이 아닌 <b>스크리닝</b>으로 범위를 한정</td>
+<td>KNN 가중치로 이웃 없는 구역을 없애고, 매출 예측이 아닌 <b>스크리닝</b>으로 범위 한정</td>
 </tr>
 <tr>
 <td width="44" align="center">03</td>
@@ -94,7 +94,7 @@
 </tr>
 <tr>
 <td width="44" align="center">09</td>
-<td width="190"><a href="09_local_llm_eval_sentiment_diag/">로컬 LLM 평가·감성모델 진단</a></td>
+<td width="190"><a href="09_local_llm_eval_sentiment_diag/">로컬 LLM 평가·모델 진단</a></td>
 <td>벤치마크 대신 <b>업무 과제</b>로 재고, GPU 결과가 한 칸이라도 다르면 전환하지 않음</td>
 </tr>
 <tr>

@@ -13,8 +13,6 @@
 
 > **TL;DR (EN)** — Applied data scientist (7 yrs: public-sector analytics PL → F&B franchise HQ). This repo shows *how* I decide: 11 anonymized case studies (problem → data → process → method → code → validation & limits) plus runnable demos on synthetic data. Company data, brand names and real metrics are intentionally excluded.
 
-> 회사 데이터·브랜드명·점포명·실측 수치·접속 정보는 포함하지 않습니다. 각 폴더는 **문제 설정 → 데이터(종류만) → 프로세스 도식 → 방법 → 코드 → 검증과 한계** 순서로 같고, 화면 캡처는 브랜드명·수치를 가린 것입니다.
-
 ## 프로젝트
 
 <table>
@@ -135,7 +133,8 @@ Python (pandas · scikit-learn · statsmodels · PyTorch) · SQL · Prophet/XGBo
 
 ## 공개 정책
 
-- 회사명·브랜드명·점포명·담당자명·실제 매출·가격·모델 성능 실측치는 싣지 않습니다.
+- 회사명·브랜드명·점포명·담당자명·실제 매출·가격·모델 성능 실측치는 싣지 않습니다. 화면 캡처는 브랜드명·수치를 가린 것입니다.
+- 각 폴더는 **문제 설정 → 데이터(종류만) → 프로세스 도식 → 방법 → 코드 → 검증과 한계** 순서로 같습니다.
 - DB 접속정보·API 키·서비스계정·사내 주소는 코드에서 제거했습니다.
 - 회사의 소스 코드는 공개하지 않습니다. 폴더의 코드는 방법을 설명하기 위해 간추려 다시 쓴 것이고, 실행 가능한 예제는 `demos/`(가상 데이터)에 있습니다.
 - 라이선스: 글·도식·그림 CC BY 4.0, 코드 MIT ([LICENSE](LICENSE)).

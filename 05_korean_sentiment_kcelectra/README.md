@@ -62,7 +62,7 @@ flowchart TD
 5. **추세검정** — 메뉴별 월간 긍정률에 Mann-Kendall(비모수 추세)과 Sen's slope(속도)를 직접 구현해 적용, 정점기 vs 최근 2-비율 z검정(효과크기 Cohen's h). 대조 메뉴와 하락 속도 차이는 OLS 상호작용으로 검정.
 6. **리포트** — 분기별 브랜드 리포트, 메뉴 심층 리포트(레시피 변경 전후), 신메뉴 리포트를 템플릿으로 자동 생성.
 
-## 코드 발췌
+## 핵심 로직 (간추린 코드)
 
 ```python
 from sklearn.model_selection import StratifiedKFold

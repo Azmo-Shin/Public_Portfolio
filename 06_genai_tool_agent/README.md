@@ -35,7 +35,7 @@ flowchart TD
 4. **테스트** — 가짜 client가 정해진 tool_calls 시퀀스를 돌려주게 해서 네트워크 없이 pytest.
 5. **활용** — 같은 "코드가 권한을 정한다" 원칙으로 만든 자연어 → SQL 실행기: allowlist로 SELECT/WITH/EXPLAIN만 허용하고 금지 키워드를 차단. 다른 프로젝트의 LLM 호출은 모델 등급을 3단계로 나눠 비용을 관리.
 
-## 코드 발췌
+## 핵심 로직 (간추린 코드)
 
 ```python
 _REGISTRY = []

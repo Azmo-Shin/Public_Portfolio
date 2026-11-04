@@ -2,7 +2,7 @@
 
 [![demos](https://github.com/Azmo-Shin/Public_Portfolio/actions/workflows/demos.yml/badge.svg)](https://github.com/Azmo-Shin/Public_Portfolio/actions/workflows/demos.yml)
 
-폴더 README의 코드는 회사 업무에서 **발췌**한 것이라 그대로는 돌릴 수 없습니다. 여기 예제는 같은 방법의 **구조**를 가상 데이터로 다시 만든 것으로, 누구나 실행하고 테스트할 수 있습니다. 출력되는 수치는 가상 데이터 값이며 실제 업무 성능과 무관합니다.
+폴더 README의 코드는 방법을 설명하려고 간추린 것이라 그대로는 돌릴 수 없습니다. 여기 예제는 같은 방법을 **가상 데이터로 새로 작성**한 것으로, 누구나 실행하고 테스트할 수 있습니다. 출력되는 수치는 가상 데이터 값이며 실제 업무 성능과 무관합니다.
 
 | 예제 | 보여 주는 판단 | 원래 폴더 |
 |---|---|---|

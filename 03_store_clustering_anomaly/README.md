@@ -64,7 +64,7 @@ flowchart TD
 6. **전월 비교** — 스냅샷을 저장하고 이전 등급 × 현재 등급 매트릭스(신규 진입·이탈 포함)를 산출.
 7. **이상탐지** — 대상일 기준 과거 3개월의 **같은 요일** 표본(n≥3)으로 mean±1.5σ 밴드, `|actual − mean| / std`로 심각도 5단계. 프로모션 기간의 급증은 "계획된 것"으로 제외.
 
-## 코드 발췌
+## 핵심 로직 (간추린 코드)
 
 ```python
 from sklearn.preprocessing import StandardScaler

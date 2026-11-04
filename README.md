@@ -64,7 +64,7 @@
 
 ## 실행해 보기 — [`demos/`](demos/)
 
-폴더의 코드는 업무 코드 **발췌**라 그대로 돌릴 수 없어서, 같은 방법의 구조를 **가상 데이터로 다시 만든 예제**를 두었습니다. 테스트는 GitHub Actions에서 자동으로 돕니다.
+폴더의 코드는 핵심 로직을 설명하려고 **간추려 다시 쓴 것**이라 그대로 돌릴 수 없어서, 같은 방법을 **가상 데이터로 새로 만든 예제**를 두었습니다. 테스트는 GitHub Actions에서 자동으로 돕니다.
 
 - [`effect_testing_bh`](demos/effect_testing_bh/) — 진짜 효과 6개를 심은 가상 데이터에서 보정 없는 p<0.05 vs BH-FDR 비교 (04)
 - [`forecast_blending`](demos/forecast_blending/) — 피처 누수 차단(`shift(1)`) 테스트, MAPE로 후보 선택, 볼록가중 블렌딩 (01)
@@ -88,7 +88,7 @@ Python (pandas · scikit-learn · statsmodels · PyTorch) · SQL · Prophet/XGBo
 
 - 회사명·브랜드명·점포명·담당자명·실제 매출·가격·모델 성능 실측치는 싣지 않습니다.
 - DB 접속정보·API 키·서비스계정·사내 주소는 코드에서 제거했습니다.
-- 폴더의 코드는 알고리즘 로직 발췌이고, 실행 가능한 재현은 `demos/`(가상 데이터)에 있습니다.
+- 회사의 소스 코드는 공개하지 않습니다. 폴더의 코드는 방법을 설명하기 위해 간추려 다시 쓴 것이고, 실행 가능한 예제는 `demos/`(가상 데이터)에 있습니다.
 - 라이선스: 글·도식·그림 CC BY 4.0, 코드 MIT ([LICENSE](LICENSE)).
 
 ## Contact

@@ -11,7 +11,7 @@
 공공기관 분석 PL로 정책 데이터 과제를 수행했고, 이후 외식 프랜차이즈 본사에서 <b>수집 → 데이터마트 → 모델링 → 검증 → 풀스택 BI 배포</b>까지 혼자 구축했습니다.
 </p>
 
-> **TL;DR (EN)** — Applied data scientist (6+ yrs: public-sector analytics PL → F&B franchise HQ). This repo shows *how* I decide: 11 anonymized case studies (problem → data → process → method → code → validation & limits) plus runnable demos on synthetic data. Company data, brand names and real metrics are intentionally excluded.
+> **TL;DR (EN)** — Applied data scientist (6+ yrs: public-sector analytics PL → F&B franchise HQ). This repo shows *how* I decide: 11 anonymized case studies (problem → data → process → method → code → validation & limits) plus runnable demos on synthetic data. Company data, brand names and business figures (sales, store counts) are excluded; model metrics are reported with their evaluation setup.
 
 ## 프로젝트
 
@@ -134,7 +134,8 @@ Python (pandas · scikit-learn · statsmodels · PyTorch) · SQL · Prophet/XGBo
 
 ## 공개 정책
 
-- 회사명·브랜드명·점포명·담당자명·실제 매출·가격·모델 성능 실측치는 싣지 않습니다. 화면 캡처는 브랜드명·수치를 가린 것입니다.
+- 회사명·브랜드명·점포명·담당자명, 매출·가격·점포 수 같은 **사업 수치**는 싣지 않습니다. 화면 캡처는 브랜드명·수치를 가린 것입니다.
+- 모델 평가 지표(MAPE·AUC·F1 등)와 개선 폭은 원본 기록의 실측치를 **평가 조건과 함께** 적습니다.
 - 각 폴더는 **문제 설정 → 데이터(종류만) → 프로세스 도식 → 방법 → 코드 → 검증과 한계** 순서로 같습니다.
 - DB 접속정보·API 키·서비스계정·사내 주소는 코드에서 제거했습니다.
 - 회사의 소스 코드는 공개하지 않습니다. 폴더의 코드는 방법을 설명하기 위해 간추려 다시 쓴 것이고, 실행 가능한 예제는 `demos/`(가상 데이터)에 있습니다.

@@ -1,6 +1,7 @@
 <p align="center"><img src="assets/banner.svg" alt="신홍조 · Data Scientist" width="100%"></p>
 
 <p align="center">
+<a href="https://shin-ds-demo.streamlit.app/"><img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Open in Streamlit"></a>
 <a href="demos/"><img src="https://github.com/Azmo-Shin/Public_Portfolio/actions/workflows/demos.yml/badge.svg" alt="demos"></a>
 <img src="https://img.shields.io/badge/text-CC%20BY%204.0-lightgrey" alt="CC BY 4.0">
 <img src="https://img.shields.io/badge/code-MIT-blue" alt="MIT">
@@ -110,6 +111,8 @@
 01~07·09·10은 외식 프랜차이즈 본사 실무, 11은 공공기관 의뢰 과제, 08은 개인 프로젝트입니다.
 
 ## 실행해 보기 — [`demos/`](demos/)
+
+**▶ [데모 열기](https://shin-ds-demo.streamlit.app/)** — 설치 없이 브라우저에서: ① BH-FDR(04) ② 요일 조건부 이상탐지(03) ③ 서울 생활인구 LISA 핫스팟(02, 실제 공공데이터).
 
 폴더의 코드는 핵심 로직을 설명하려고 **간추려 다시 쓴 것**이라 그대로 돌릴 수 없어서, 같은 방법을 **가상 데이터로 새로 만든 예제**를 두었습니다. 테스트는 GitHub Actions에서 자동으로 돕니다.
 

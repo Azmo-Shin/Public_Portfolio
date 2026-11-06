@@ -1,5 +1,7 @@
 # demos — 가상 데이터로 실제로 돌아가는 예제
 
+**▶ [데모 앱 열기](https://shin-ds-demo.streamlit.app/)** (Streamlit Community Cloud, 설치 없음)
+
 [![demos](https://github.com/Azmo-Shin/Public_Portfolio/actions/workflows/demos.yml/badge.svg)](https://github.com/Azmo-Shin/Public_Portfolio/actions/workflows/demos.yml)
 
 폴더 README의 코드는 방법을 설명하려고 간추린 것이라 그대로는 돌릴 수 없습니다. 여기 예제는 같은 방법을 **가상 데이터로 새로 작성**한 것으로, 누구나 실행하고 테스트할 수 있습니다. 출력되는 수치는 가상 데이터 값이며 실제 업무 성능과 무관합니다.

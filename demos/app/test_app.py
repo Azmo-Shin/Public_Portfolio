@@ -12,7 +12,7 @@ def test_each_demo_runs(demo):
     at.query_params["demo"] = demo
     at.run()
     assert not at.exception, at.exception
-    assert len(at.metric) >= 3
+    assert any("class=\"kpis\"" in m.value for m in at.markdown)
 
 
 def test_data_files_present():

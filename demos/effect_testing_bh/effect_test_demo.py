@@ -23,19 +23,20 @@ def benjamini_hochberg(p):
     return out
 
 
-def make_data(seed=SEED):
+def make_data(seed=SEED, n_stores=N_STORES, n_items=N_ITEMS, true_items=TRUE_ITEMS, effect_range=(0.6, 1.0), noise=1.0):
     """매장 × 항목 점수(0/1: 고/저 점수군)와 매출 변화율. 진짜 항목만 매출에 영향."""
     rng = np.random.default_rng(seed)
-    high = rng.integers(0, 2, size=(N_STORES, N_ITEMS))
-    effect = np.zeros(N_ITEMS)
-    effect[list(TRUE_ITEMS)] = rng.uniform(0.6, 1.0, size=len(TRUE_ITEMS))
-    sales_change = high @ effect + rng.normal(0, 1.0, size=N_STORES)
-    items = [f"item_{i:02d}" for i in range(N_ITEMS)]
+    high = rng.integers(0, 2, size=(n_stores, n_items))
+    effect = np.zeros(n_items)
+    effect[list(true_items)] = rng.uniform(*effect_range, size=len(true_items))
+    sales_change = high @ effect + rng.normal(0, noise, size=n_stores)
+    items = [f"item_{i:03d}" for i in range(n_items)]
     return pd.DataFrame(high, columns=items), pd.Series(sales_change, name="sales_change")
 
 
-def run(seed=SEED, alpha=0.05, q=0.10):
-    scores, y = make_data(seed)
+def run(seed=SEED, alpha=0.05, q=0.10, **data_kw):
+    scores, y = make_data(seed, **data_kw)
+    true_items = set(data_kw.get("true_items", TRUE_ITEMS))
     rows = []
     for col in scores:
         hi, lo = y[scores[col] == 1], y[scores[col] == 0]
@@ -43,7 +44,7 @@ def run(seed=SEED, alpha=0.05, q=0.10):
         rows.append((col, p))
     res = pd.DataFrame(rows, columns=["item", "p"])
     res["p_adj_bh"] = benjamini_hochberg(res["p"])
-    res["truly_effective"] = [int(c[-2:]) in TRUE_ITEMS for c in res["item"]]
+    res["truly_effective"] = [int(c.split("_")[1]) in true_items for c in res["item"]]
     res["naive_sig"] = res["p"] < alpha
     res["bh_sig"] = res["p_adj_bh"] < q
     return res.sort_values("p").reset_index(drop=True)

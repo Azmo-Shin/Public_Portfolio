@@ -10,12 +10,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: pip install -r demos/requirements.txt
+      - run: pip install -r demos/requirements.txt -r demos/app/requirements.txt
       - name: Run demo tests
         working-directory: demos
         run: |
           python -m pytest effect_testing_bh -q
           python -m pytest forecast_blending -q
+          python -m pytest app -q
       - name: Run demos end to end
         working-directory: demos
         run: |

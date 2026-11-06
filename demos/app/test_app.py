@@ -1,15 +1,18 @@
-"""앱 연기 시험: 세 탭이 오류 없이 그려지는지 (streamlit AppTest)."""
+"""앱 연기 시험: 데모 3개가 각각 오류 없이 그려지는지 (streamlit AppTest, ?demo=1|2|3)."""
 import os
+import pytest
 from streamlit.testing.v1 import AppTest
 
 APP = os.path.join(os.path.dirname(os.path.abspath(__file__)), "streamlit_app.py")
 
 
-def test_app_runs_without_exception():
-    at = AppTest.from_file(APP, default_timeout=120).run()
+@pytest.mark.parametrize("demo", ["1", "2", "3"])
+def test_each_demo_runs(demo):
+    at = AppTest.from_file(APP, default_timeout=180)
+    at.query_params["demo"] = demo
+    at.run()
     assert not at.exception, at.exception
-    assert len(at.tabs) == 3
-    assert len(at.metric) >= 8
+    assert len(at.metric) >= 3
 
 
 def test_data_files_present():

@@ -2,7 +2,7 @@
 
 # 04 · 효과 검증 — ANOVA/Tukey, 비모수 검정, Benjamini-Hochberg FDR
 
-> ▶ **[데모 열기](https://shin-ds-demo.streamlit.app/)** — ① BH-FDR (가상 데이터) 탭에서 이 폴더의 판단을 직접 바꿔 볼 수 있습니다.
+> ▶ **[데모 열기](https://shin-ds-demo.streamlit.app/?demo=1)** — ① BH-FDR (가상 데이터) 탭에서 이 폴더의 판단을 직접 바꿔 볼 수 있습니다.
 
 신규 오픈 매장에서 **담당자에 따라 매출이 다른지**, **오픈 마케팅 항목 점수가 매출로 이어지는지**를 통계적으로 검증해 오픈팀의 전략 초점을 바꾼 프로젝트입니다.
 

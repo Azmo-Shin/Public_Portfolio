@@ -9,7 +9,7 @@
 
 <p align="center">
 <b>예측 · 공간통계 · 텍스트마이닝 · Gen-AI 에이전트</b>를 실무에 적용해 온 응용 데이터 사이언티스트의 <b>방법론 포트폴리오</b>입니다.<br>
-공공기관 분석 PL로 정책 데이터 과제를 수행했고, 이후 외식 프랜차이즈 본사에서 <b>수집 → 데이터마트 → 모델링 → 검증 → 풀스택 BI 배포</b>까지 혼자 구축했습니다.
+공공기관 분석 PL로 정책 데이터 과제를 수행했고, 이후 외식 프랜차이즈 본사에서 <b>수집 → 데이터마트 → 모델링 → 검증 → 풀스택 BI 배포</b>까지 직접 구축해 현업 4개 팀이 쓰는 분석을 운영하고 있습니다.
 </p>
 
 > **TL;DR (EN)** — Applied data scientist (6+ yrs: public-sector analytics PL → F&B franchise HQ). This repo shows *how* I decide: 11 anonymized case studies (problem → data → process → method → code → validation & limits) plus runnable demos on synthetic data. Company data, brand names and business figures (sales, store counts) are excluded; model metrics are reported with their evaluation setup.
